@@ -10,7 +10,7 @@ COPY with_plugins.go /build_caddy/with_plugins.go
 
 WORKDIR /build_caddy
 RUN go mod init caddy && \
-    go get github.com/mholt/caddy && \
+    go get github.com/GuoxiW/caddy && \
     go build
 
 # Dist image
