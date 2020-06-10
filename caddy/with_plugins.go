@@ -6,7 +6,7 @@ import (
 
 	// plug in plugins here
 	//_ "github.com/captncraig/cors/caddy"
-	_ "/github.com/GuoxiW/cors/tree/master/caddy"
+	_ "github.com/GuoxiW/cors/tree/master/caddy"
 )
 
 func main() {
