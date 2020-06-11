@@ -99,7 +99,7 @@ func main() {
     github.com/mholt/caddy/caddyhttp/httpserver   ->   github.com/GuoxiW/caddy/caddyhttp/httpserver
     ```
 
-2. 修改官方 `docker` 中的 `caddy` 配置。
+  2. 修改官方 `docker` 中的 `caddy` 配置。
   
     1. 在 `github` 上 `fork` 原始版本 https://github.com/oipwg/docker
 
