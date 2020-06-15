@@ -38,25 +38,25 @@ http://<ip>/testnet/kibana      Kibana instance running on testnet
 http://<ip>/ipfs/               IPFS Gateway
 ```
 
-- Build image - necessary if Caddyfile or with_plugins.go are modified `docker-compose build caddy`
-- Run daemon in background `docker-compose up -d caddy`
-- Tail daemon logs `docker-compose logs -f caddy`
+- Build image - necessary if Caddyfile or with_plugins.go are modified `sudo docker-compose build caddy`
+- Run daemon in background `sudo docker-compose up -d caddy`
+- Tail daemon logs `sudo docker-compose logs -f caddy`
 
 
 
 ### IPFS
 A local directory at `./ipfsStaging` is available and mounted as `/export` within the IPFS container
 
-- Build image - necessary if config file is modified `docker-compose build ipfs`
-- Run daemon in background `docker-compose up -d ipfs`
-- Tail daemon logs `docker-compose logs -f ipfs`
+- Build image - necessary if config file is modified `sudo docker-compose build ipfs`
+- Run daemon in background `sudo docker-compose up -d ipfs`
+- Tail daemon logs `sudo docker-compose logs -f ipfs`
 
 
 ### Web Wallet
 Web wallet provides a multi currency web accessible wallet
 
-- Run daemon in background `docker-compose up -d webwallet`
-- Tail daemon logs `docker-compose logs -f webwallet`
+- Run daemon in background `sudo docker-compose up -d webwallet`
+- Tail daemon logs `sudo docker-compose logs -f webwallet`
 
 
 
@@ -66,30 +66,30 @@ Web wallet provides a multi currency web accessible wallet
 ### Go-Flo
 Modify `go-flo/mainnet.conf`
 
-- Build image - necessary if config file is modified `docker-compose build goflomainnet`
-- Run daemon in background `docker-compose up -d goflomainnet`
-- Tail daemon logs `docker-compose logs -f goflomainnet`
+- Build image - necessary if config file is modified `sudo docker-compose build goflomainnet`
+- Run daemon in background `sudo docker-compose up -d goflomainnet`
+- Tail daemon logs `sudo docker-compose logs -f goflomainnet`
 
 
 ### OIP
 Modify `oip/config.mainnet.yml`
 
-- Build image - necessary if config file is modified `docker-compose build oipmainnet`
-- Run daemon in background `docker-compose up -d oipmainnet`
-- Tail daemon logs `docker-compose logs -f oipmainnet`
+- Build image - necessary if config file is modified `sudo docker-compose build oipmainnet`
+- Run daemon in background `sudo docker-compose up -d oipmainnet`
+- Tail daemon logs sudo `docker-compose logs -f oipmainnet`
 
 
 ### Elasticsearch
 Elasticsearch mainnet defaults to 4GB Heap size, adjust `ES_JAVA_OPTS` as appropriate
 
-- Run daemon in background `docker-compose up -d esmainnet`
-- Tail daemon logs `docker-compose logs -f esmainnet`
+- Run daemon in background `sudo docker-compose up -d esmainnet`
+- Tail daemon logs `sudo docker-compose logs -f esmainnet`
 
 
 ### Kibana
 
-- Run daemon in background `docker-compose up -d kibanamainnet`
-- Tail daemon logs `docker-compose logs -f kibanamainnet`
+- Run daemon in background `sudo docker-compose up -d kibanamainnet`
+- Tail daemon logs `sudo docker-compose logs -f kibanamainnet`
 
 
 
@@ -99,28 +99,28 @@ Elasticsearch mainnet defaults to 4GB Heap size, adjust `ES_JAVA_OPTS` as approp
 ### Go-Flo
 Modify `go-flo/testnet.conf`
 
-- Build image - necessary if config file is modified `docker-compose build goflotestnet`
-- Run daemon in background `docker-compose up -d goflotestnet`
-- Tail daemon logs `docker-compose logs -f goflotestnet`
+- Build image - necessary if config file is modified `sudo docker-compose build goflotestnet`
+- Run daemon in background `sudo docker-compose up -d goflotestnet`
+- Tail daemon logs `sudo docker-compose logs -f goflotestnet`
 
 
 ### OIP
 Modify `oip/config.testnet.yml`
 
-- Build image - necessary if config file is modified `docker-compose build oiptestnet`
-- Run daemon in background `docker-compose up -d oiptestnet`
-- Tail daemon logs `docker-compose logs -f oiptestnet`
+- Build image - necessary if config file is modified `sudo docker-compose build oiptestnet`
+- Run daemon in background `sudo docker-compose up -d oiptestnet`
+- Tail daemon logs `sudo docker-compose logs -f oiptestnet`
 
 
 ### Elasticsearch
 Elasticsearch testnet defaults to 2GB Heap size, adjust `ES_JAVA_OPTS` as appropriate
 
-- Run daemon in background `docker-compose up -d estestnet`
-- Tail daemon logs `docker-compose logs -f estestnet`
+- Run daemon in background `sudo docker-compose up -d estestnet`
+- Tail daemon logs `sudo docker-compose logs -f estestnet`
 
 
 ### Kibana
 
-- Run daemon in background `docker-compose up -d kibanatestnet`
-- Tail daemon logs `docker-compose logs -f kibanatestnet`
+- Run daemon in background `sudo docker-compose up -d kibanatestnet`
+- Tail daemon logs `sudo docker-compose logs -f kibanatestnet`
 
