@@ -76,7 +76,7 @@ Modify `oip/config.mainnet.yml`
 
 - Build image - necessary if config file is modified `sudo docker-compose build oipmainnet`
 - Run daemon in background `sudo docker-compose up -d oipmainnet`
-- Tail daemon logs sudo `docker-compose logs -f oipmainnet`
+- Tail daemon logs sudo `sudo docker-compose up -d webwalletdocker-compose logs -f oipmainnet`
 
 
 ### Elasticsearch
