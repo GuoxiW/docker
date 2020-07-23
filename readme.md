@@ -104,19 +104,34 @@ Modify `go-flo/testnet.conf`
 - Tail daemon logs `sudo docker-compose logs -f goflotestnet`
 
 
+### Elasticsearch
+Elasticsearch testnet defaults to 2GB Heap size, adjust `ES_JAVA_OPTS` as appropriate
+```
+# to solve 
+ERROR: [1] bootstrap checks failed
+[1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+```
+
+```
+sudo vim /etc/sysctl.conf　　
+```
+```
+vm.max_map_count=655360
+```
+```
+sudo sysctl -p
+```
+
+- Run daemon in background `sudo docker-compose up -d estestnet`
+- Tail daemon logs `sudo docker-compose logs -f estestnet`
+
+
 ### OIP
 Modify `oip/config.testnet.yml`
 
 - Build image - necessary if config file is modified `sudo docker-compose build oiptestnet`
 - Run daemon in background `sudo docker-compose up -d oiptestnet`
 - Tail daemon logs `sudo docker-compose logs -f oiptestnet`
-
-
-### Elasticsearch
-Elasticsearch testnet defaults to 2GB Heap size, adjust `ES_JAVA_OPTS` as appropriate
-
-- Run daemon in background `sudo docker-compose up -d estestnet`
-- Tail daemon logs `sudo docker-compose logs -f estestnet`
 
 
 ### Kibana
