@@ -20,3 +20,6 @@ https://github.com/oipwg/oip
 ## Kibana
 - 方便的 UI 界面来查看 oip 的数据库(ElasticSearch)。
 - 5601端口。
+
+## webwallet
+- 轻量级的浏览器钱包。

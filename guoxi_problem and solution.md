@@ -143,3 +143,10 @@ remove (or rename) that container to be able to reuse that name.
 sudo docker container ls -all
 sudo docker container rm 6dcdbc81c5e6
 ```
+
+
+### 4. 关闭正在运行的caddy并重新启动
+```
+sudo docker ps
+sudo docker stop id
+```
