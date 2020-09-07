@@ -133,4 +133,13 @@ func main() {
 docker pull caddy/caddy
 ```
 
+### 3. 官方最新的docker显示已占用。
+```
+docker: Error response from daemon: Conflict. The container name "/oip" is already in use by container "6dcdbc81c5e6bd5506b6fc85d8e507114c1a7f632f1c552edbd01866b72d1283". You have to
+remove (or rename) that container to be able to reuse that name.
+```
 
+```
+sudo docker container ls -all
+sudo docker container rm 6dcdbc81c5e6
+```
