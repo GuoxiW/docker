@@ -44,7 +44,7 @@
 
 
 :80/testnet/oip {
-  basicauth / kibana mainnet 
+  basicauth / kibana testnet 
   import std
   gzip
   proxy / oiptestnet:11606/oip {
