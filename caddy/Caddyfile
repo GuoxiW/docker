@@ -47,7 +47,7 @@
   basicauth / kibana mainnet 
   import std
   gzip
-  proxy / oiptestnet:1606/oip {
+  proxy / oiptestnet:11606/oip {
 	transparent
   }
   cors
