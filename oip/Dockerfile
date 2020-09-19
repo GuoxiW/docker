@@ -11,7 +11,9 @@ RUN curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/d
 
 # 将资源编译到二进制语言中的软件
 RUN go get -u github.com/gobuffalo/packr/v2/packr2
-RUN git clone https://github.com/oipwg/oip /go/src/github.com/oipwg/oip
+
+# oip切换为当时的版本
+RUN git clone https://github.com/oipwg/oip -b 20190411-e929a52 /go/src/github.com/oipwg/oip
 WORKDIR /go/src/github.com/oipwg/oip
 RUN dep ensure -v
 WORKDIR /go/src/github.com/oipwg/oip/cmd/oipd
