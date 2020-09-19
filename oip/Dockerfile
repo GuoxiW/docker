@@ -22,7 +22,7 @@ RUN packr2 -v
 # GitCommitHash为最新的commit id
 # BuildDate为当下时间
 RUN go build -ldflags \
-        "-X github.com/oipwg/oip/version.GitCommitHash=$(git rev-parse --short HEAD) \
+        "-X github.com/oipwg/oip/version.GitCommitHash=e929a52fd \
         -X github.com/oipwg/oip/version.BuildDate=$(date +'%Y.%m.%d.%H%M%S') \
         -X github.com/oipwg/oip/version.BuiltBy=Docker \
         -X 'github.com/oipwg/oip/version.GoVersion=$(go version)' \
