@@ -48,7 +48,7 @@ http://<ip>/ipfs/               IPFS Gateway
 A local directory at `./ipfsStaging` is available and mounted as `/export` within the IPFS container
 
 - Build image - necessary if config file is modified `sudo docker-compose build ipfs`
-- Run daemon in background `sudo docker-compose up -d ipfs`
+- Run daemon in background `sudo docker-compose up -d ipfs` **-d 后台运行**
 - Tail daemon logs `sudo docker-compose logs -f ipfs`
 
 
@@ -139,3 +139,15 @@ Modify `oip/config.testnet.yml`
 - Run daemon in background `sudo docker-compose up -d kibanatestnet`
 - Tail daemon logs `sudo docker-compose logs -f kibanatestnet`
 
+
+
+
+|        Name          |        Command       |   State   |       Ports|
+|:----:|:----:|:----:|:----:|
+|docker_caddy_1       |  /sbin/tini -- caddy -agree ... |  Up   |  0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp |
+|docker_estestnet_1   |  /usr/local/bin/docker-entr ... | Up    | 9200/tcp, 9300/tcp                       |
+|docker_goflotestnet_1|  /flod/bin/flod --configfil ... |    Up |    0.0.0.0:17316->17316/tcp, 127.0.0.1:17317->17317/tcp |
+|docker_ipfs_1        |  /sbin/tini --/usr/local/b ...  |    Up |    0.0.0.0:4001->4001/tcp, 4001/udp, 127.0.0.1:5001->5001/tcp, 127.00.|1:8080->8080/tcp, 8081/tcp |
+|docker_kibanatestnet_1 |  /usr/local/bin/kibana-docker | Up    | 127.0.0.1:15601->5601/tcp                |                             
+|docker_oiptestnet_1    | /oip/bin/oipd --appdir=/oip   |   Up  |   127.0.0.1:11606->11606/tcp            |                         
+|docker_webwallet_1     | docker-entrypoint.sh npm start|   Up  |   127.0.0.1:7000->7000/tcp|
