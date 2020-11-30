@@ -98,6 +98,29 @@ func main() {
     github.com/mholt/caddy  ->   github.com/GuoxiW/caddy
     github.com/mholt/caddy/caddyhttp/httpserver   ->   github.com/GuoxiW/caddy/caddyhttp/httpserver
     ```
+  - https://github.com/bitspill/flod/
+    1. 在 `github` 上 `fork` 原始版本 https://github.com/bitspill/flod `2be2f12b358dc57d70b8f501b00be450192efbc3`
+    
+    2. `github` 上删除多余的 `branch`。
+
+    3. 切换到指定 `tag` (2018年 2 月 20 日版本)。
+    ```
+    git clone https://github.com/GuoxiW/flod/
+    cd flod
+    git reset --hard 2be2f12b358dc57d70b8f501b00be450192efbc3
+    git push -u origin master -f (不建议，可能出问题)
+    ```
+    4. `VS Code` 改动更新后的地址并提交更改
+
+       1. `git clone` 下来用 `vscode` 
+       2. 把 `mholt/caddy` 替换为 `GuoxiW/caddy`
+       3. 把 `captncraig/cors` 替换为 `GuoxiW/cors`
+       4. 提交更改
+    ```
+    # 替换记录
+    go-flo中注释
+    ```
+
 
   2. 修改官方 `docker` 中的 `caddy` 配置。
   

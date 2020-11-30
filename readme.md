@@ -38,6 +38,10 @@ http://<ip>/testnet/kibana      Kibana instance running on testnet
 http://<ip>/ipfs/               IPFS Gateway
 ```
 
+(
+重新构建--no-cache
+sudo docker-compose build --no-cache caddy
+)
 - Build image - necessary if Caddyfile or with_plugins.go are modified `sudo docker-compose build caddy`
 - Run daemon in background `sudo docker-compose up -d caddy`
 - Tail daemon logs `sudo docker-compose logs -f caddy`
@@ -76,7 +80,7 @@ Modify `oip/config.mainnet.yml`
 
 - Build image - necessary if config file is modified `sudo docker-compose build oipmainnet`
 - Run daemon in background `sudo docker-compose up -d oipmainnet`
-- Tail daemon logs sudo `sudo docker-compose up -d webwalletdocker-compose logs -f oipmainnet`
+- Tail daemon logs sudo `sudo docker-compose logs -f oipmainnet`
 
 
 ### Elasticsearch
